@@ -441,3 +441,316 @@ var fs = require("fs");
      canDrive = true;
      console.log(canDrive)
  }
+
+ /*mastery quiz - boolean - question 1 - Using boolean operators, print true or false if age is greater than or equal to 16.
+ my answer - 
+ */
+ var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+var age = parseInt(input[0]);
+
+
+//write your code here
+
+if (age >= 16){
+    console.log ('true');
+}
+    else {
+        console.log ('false');
+}
+
+//instructor answer
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+var age = parseInt(input[0]);
+var canDrive = false;
+
+//Write your code here
+console.log(age >= 16 );
+
+/*question 2 - Determine if var1 is not equal to var2. Print the result to the console using console.log(). 
+my answer -
+*/
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+var var1 = input[0];
+var var2 = input[1];
+
+//write your code here
+
+console.log(var1 != var2);
+
+//instructor answer
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+var var1 = input[0];
+var var2 = input[1];
+
+//write your code here
+console.log(var1 != var2);
+
+/*question 3 - Using Boolean Operators, print the result of a is greater than b or b and c are greater than d.
+my answer - 
+*/
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+var a = parseInt(input[0]);
+var b = parseInt(input[1]);
+var c = parseInt(input[2]);
+var d = parseInt(input[3]);
+
+//Write your code here
+
+if ((a > b) || ((b && c) > d)){
+    console.log (true);
+} else {
+    console.log (false);
+}
+
+//instructor answer
+
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+var a = parseInt(input[0]);
+var b = parseInt(input[1]);
+var c = parseInt(input[2]);
+var d = parseInt(input[3]);
+
+console.log(a > b || (b > d && c > d));
+
+/*question 4 - If the day is "Sunday" or "Saturday" print true. Otherwise, print false. - my answer */
+
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+var day = input[0];
+
+
+//Write your code here
+
+if (day === "Sunday" || day === "Saturday"){
+    console.log(true);
+}else{
+    console.log(false);
+}
+
+//instructor answer
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+var day = input[0];
+
+
+//Write your code here
+console.log(day === "Sunday" || day === "Saturday");
+
+/*question 5 - Determine if myGrade is passing. Using console.log(), print true if it is and false if not.
+Then, determine if myGrade is an A. Using console.log(), print true or false to the console. (A will be 90 or above).
+my answer - */
+
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+var myGrade = parseInt(input[0]);
+var passingGrade = 70;
+
+//write your code here.
+
+console.log(myGrade >= passingGrade);
+console.log(myGrade >= 90);
+
+//instructor answer
+
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+var myGrade = parseInt(input[0]);
+var passingGrade = 70;
+
+//write your code here.
+console.log(myGrade >= passingGrade);
+console.log(myGrade >= 90);
+
+/* question 6 - Create a for loop that prints out a multiplication table for num from 1 through 10 as follows (the value of num will be input by the user):
+If a user enters 1, the console should print the following:
+
+1 x 1 = 1
+1 x 2 =2
+1 x 3 = 3
+1 x 4 = 4
+1 x 5 = 5
+1 x 6 = 6
+1 x 7 = 7
+1 x 8 = 8
+1 x 9 = 9
+1 x 10 = 10
+
+my answer - 
+*/
+
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+var num = parseInt(input[0]);
+
+
+//Write your code here
+
+for(let i = 1;i <= 10; i++){
+    console.log(num + " x " + i + " = " +(num*i));
+}
+
+//instructor answer
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+var num = parseInt(input[0]);
+
+
+//Write your code here
+
+for(var i=1; i<=10; i++) {
+    console.log(num +" x " + i + " = " + (num*i) );
+}
+
+/* question 2 - using the supplied variables, create a loop of your choice that will add cups of rice to a bowl. Each time a cup of rice is added, print "The bowl contains X cups of rice.", where X is the number of cups added. Once the number of cups called for has been reached, print "We have enough rice!".
+Note, we don't need to know if the bowl is empty.
+
+my answer */
+
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+
+var requiredCupsOfRice = parseInt(input[0]);
+var currentCupsOfRice = 0;
+
+//write your code here
+
+for(var i = 1; i <= requiredCupsOfRice; i++)
+    console.log(`The bowl contains ${i} cups of rice.`);
+    if (i > requiredCupsOfRice)
+     console.log("We have enough rice!");
+
+//instructor answer
+
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+
+var requiredCupsOfRice = parseInt(input[0]);
+var currentCupsOfRice = 0;
+
+//This is just one example using a while loop
+
+while(currentCupsOfRice != requiredCupsOfRice){
+    console.log('The bowl contains ' + (++currentCupsOfRice) + ' cups of rice.');
+}
+console.log('We have enough rice!');
+
+/*question 3 - Write a for loop that prints the numbers 0 to x. The x has been initialized for you and will be based on a user's input.
+my answer - 
+*/
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+var x = parseInt(input[0]);
+
+
+//write your code here
+
+for(let i = 0; i <= x; i++) {
+  console.log(i)
+}
+
+//instructor answer
+
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+var x = parseInt(input[0]);
+
+
+//write your code here
+
+for ( var i = 0; i <= x; ++i ) {
+     console.log(i);
+}
+/*question 4 - Create a do/while loop that will print the userNumber and then add 6 after each loop. Stop the loop once the number is greater than or equal to 100.
+my answer - 
+*/
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+var userNumber = parseInt(input[0]);
+
+//write your code here
+
+var  i = 0
+do {
+  console.log (userNumber) + (userNumber = userNumber + 6);
+} while (userNumber<=100)
+
+//instructor answer
+
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+var userNumber = parseInt(input[0]);
+
+//write your code here
+do {
+    console.log(userNumber);
+    userNumber = userNumber + 6;
+} while(userNumber <= 100);
+
+/* question 5 - Write a for loop that loops from 1-100 and prints the iteration count and "foo" if the iteration count is even.
+
+For example, if the iteration count is 2, then the console would read "2 foo". The final output should be "100 foo". Notice there is a space between the number and foo
+
+my answer - 
+*/
+//write your code here
+
+var i = 0; 
+while(i < 100) { 
+   i += 2; 
+   console.log(`${i} foo`); 
+} 
+//instrustor answer
+
+for(var i = 1; i <= 100; i++){
+    if (i % 2 === 0){
+        console.log(i + " foo")
+    }
+}
+
+/*question 6 - Let's play a game. The game will consist of 100 turns. If the number of turns is even, you gain 5 points. If it's odd, you gain 3 points. If ever your score is equal to 125, you are reset back to 25 points. This will only be allowed to happen once. The game ends if you are able to make it through 100 turns or you reach more than 290 points, whichever comes first.
+
+Using a for loop, create the game.
+
+my answer - 
+*/
+
+var points = 0;
+var pointsReset = false; 
+
+//write your code here
+
+for(let i = 0; i < 100 && points < 290; i++){
+    if(points == 125 && pointsReset === false){
+    points = 25;
+    pointsReset = true;
+    }
+    else if(i % 2 === 0){
+        points = points + 5;
+    }
+    else{
+        points = points + 3;
+    }
+    console.log("Turns: " + i + " Score: " + points);
+}
+//instructor answer
+var points = 0;
+var pointsReset = false; 
+
+for(var i = 0; i < 100 && points < 290; i++){
+    if(points == 125 && pointsReset === false){
+        points = 25;
+        pointsReset = true;
+    } else if(i % 2 === 0){
+        points = points + 5;
+    } else {
+        points = points + 3;
+    }
+    
+    console.log("Turns: " + i + " Score: " + points)
+}
